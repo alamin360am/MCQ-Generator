@@ -6,7 +6,7 @@ const envSchema = z.object({
     .enum(["development", "test", "production"])
     .default("development"),
 
-  PORT: z.coerce.number().int().positive().default(5000),
+  PORT: z.coerce.number().default(5000),
 
   CORS_ORIGINS: z.string().default("http://localhost:5173"),
 

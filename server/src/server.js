@@ -16,10 +16,8 @@ const startServer = async () => {
 
     await verifyCloudinaryConnection();
 
-    app.listen(env.PORT, () => {
-      console.log(`Server running on http://localhost:${env.PORT}`);
-
-      console.log(`Environment: ${env.NODE_ENV}`);
+    app.listen(env.PORT, "0.0.0.0", () => {
+      console.log(`Server running on port ${env.PORT}`);
     });
   } catch (error) {
     console.error("Server startup failed:", error.message);
